@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Factura" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="19331f9e-4a83-4893-8b28-77c4a604a07e">
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+    <parameter name="nombre_1" class="java.lang.String"/>
+    <parameter name="cantidad_1" class="java.lang.Integer"/>
+    <parameter name="precioUnitario_1" class="java.lang.Float">
+        <defaultValueExpression><![CDATA[$P{precioUnitario_1}]]></defaultValueExpression>
+    </parameter>
+    <parameter name="montoTotal_1" class="java.lang.Float">
+        <defaultValueExpression><![CDATA[$P{montoTotal_1}]]></defaultValueExpression>
+    </parameter>
+    <parameter name="nombre_2" class="java.lang.String"/>
+    <parameter name="cantidad_2" class="java.lang.Integer"/>
+    <parameter name="precioUnitario_2" class="java.lang.Float"/>
+    <parameter name="montoTotal_2" class="java.lang.Float"/>
+    <parameter name="nombre_3" class="java.lang.String"/>
+    <parameter name="cantidad_3" class="java.lang.Integer"/>
+    <parameter name="precioUnitario_3" class="java.lang.Float"/>
+    <parameter name="montoTotal_3" class="java.lang.Float"/>
+    <parameter name="total" class="java.lang.Float"/>
+    <parameter name="iva" class="java.lang.Float"/>
+    <parameter name="totalConIVA" class="java.lang.Float"/>
+    <queryString>
+        <![CDATA[]]>
+    </queryString>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <title>
+        <band height="79" splitType="Stretch">
+            <staticText>
+                <reportElement x="160" y="15" width="210" height="55" uuid="0e66328a-fea5-4864-8fe1-56796a55b7cc"/>
+                <textElement textAlignment="Center" markup="none">
+                    <font size="26"/>
+                </textElement>
+                <text><![CDATA[FACTURA]]></text>
+            </staticText>
+        </band>
+    </title>
+    <pageHeader>
+        <band height="202" splitType="Stretch">
+            <textField>
+                <reportElement x="255" y="18" width="112" height="28" uuid="f360a720-1c62-412e-8cfd-584a27747ae1"/>
+                <textFieldExpression><![CDATA[$P{precioUnitario_1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="3" y="15" width="139" height="25" uuid="4f64f545-d9b7-4318-be23-0362db6073a2"/>
+                <textFieldExpression><![CDATA[$P{nombre_1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="164" y="17" width="81" height="29" uuid="657e6538-9e97-4ae5-92a8-db8531b856c9"/>
+                <textFieldExpression><![CDATA[$P{cantidad_1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="376" y="21" width="111" height="25" uuid="86d47885-82f0-44ac-a16f-0c53e646778e"/>
+                <textFieldExpression><![CDATA[$P{montoTotal_1}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="165" y="56" width="81" height="21" uuid="ff5dc11c-1735-41d5-9cee-42f6510ef555"/>
+                <textFieldExpression><![CDATA[$P{cantidad_2}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="255" y="55" width="114" height="21" uuid="b227aa36-04bb-40b9-9af9-c46dd6846a98"/>
+                <textFieldExpression><![CDATA[$P{precioUnitario_2}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="376" y="51" width="111" height="21" uuid="a4de9886-1a68-42b0-b164-6926bf5a9dec"/>
+                <textFieldExpression><![CDATA[$P{montoTotal_2}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="6" y="91" width="144" height="24" uuid="56d6ee56-360f-48f4-baf3-8e2ba7985de0"/>
+                <textFieldExpression><![CDATA[$P{nombre_3}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="159" y="90" width="91" height="21" uuid="0d81a9af-00b3-416c-85d5-58dcfd3a49e1"/>
+                <textFieldExpression><![CDATA[$P{cantidad_3}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="261" y="89" width="101" height="26" uuid="4ad83540-fed0-4ca4-be6a-2513d8c21675"/>
+                <textFieldExpression><![CDATA[$P{precioUnitario_3}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="382" y="86" width="101" height="21" uuid="1ce17f74-47a8-4864-8d94-0a5a69c97b76"/>
+                <textFieldExpression><![CDATA[$P{montoTotal_3}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="368" y="118" width="71" height="21" uuid="0f16c9dc-a44d-4dcb-9e49-9f5b86e1a157"/>
+                <textFieldExpression><![CDATA[$P{total}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="370" y="145" width="61" height="21" uuid="3db6a568-9ae5-4d02-bde0-944d158b4f08"/>
+                <textFieldExpression><![CDATA[$P{iva}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="366" y="171" width="101" height="21" uuid="53a15ff9-f237-44e3-9fa1-642e7c86541e"/>
+                <textFieldExpression><![CDATA[$P{totalConIVA}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageHeader>
+    <columnHeader>
+        <band height="40" splitType="Stretch">
+            <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+        </band>
+    </columnHeader>
+    <detail>
+        <band height="74" splitType="Stretch">
+            <property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.spreadsheet.SpreadsheetLayout"/>
+        </band>
+    </detail>
+    <columnFooter>
+        <band splitType="Stretch"/>
+    </columnFooter>
+    <pageFooter>
+        <band height="54" splitType="Stretch">
+            <textField>
+                <reportElement x="5" y="-265" width="145" height="26" uuid="28121d2f-b1ca-4ec0-9a27-3240731807a4"/>
+                <textFieldExpression><![CDATA[$P{nombre_2}]]></textFieldExpression>
+            </textField>
+        </band>
+    </pageFooter>
+    <summary>
+        <band height="42" splitType="Stretch"/>
+    </summary>
+</jasperReport>
