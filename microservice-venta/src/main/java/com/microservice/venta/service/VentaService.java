@@ -45,7 +45,7 @@ public class VentaService {
 
     public VentaDto create (ListProductoDto listProductoDto, String authentication) throws JRException {
 
-        if(listProductoDto.getProductoDtoList().size() > 10) throw new RuntimeException();
+        if(listProductoDto.getProductoDtoList().size() > 3) throw new RuntimeException();
 
         String token = authentication.substring(7);
         ListProductoDto listProductoDtoVenta = inventarioClient.getProducts(listProductoDto,token);
