@@ -30,7 +30,7 @@ public ResponseEntity<?> findVenta(@PathVariable Long number, @RequestHeader(Htt
 }
 
 @GetMapping("/pdf/{number}")
-public ResponseEntity<FileSystemResource> findFilePdf(@PathVariable Long number, @RequestHeader(HttpHeaders.AUTHORIZATION) final String authentication){
+public ResponseEntity<FileSystemResource> findFilePdf(@PathVariable Long number, @RequestHeader(HttpHeaders.AUTHORIZATION) final String authentication) throws JRException {
     return ventaService.findFilePdf(number, authentication);
 }
 
